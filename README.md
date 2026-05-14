@@ -1,24 +1,22 @@
-# Portfolio-
+# Portfolio — URSA0112
 
-A modern 3D portfolio website built with Three.js, featuring particle systems, animated 3D objects, glassmorphism design, and smooth scroll animations.
+A modern, performant portfolio built with Next.js, Tailwind CSS, Framer Motion, and React Three Fiber.
 
-## Live Site
-[View Portfolio](https://ursa0112.github.io/Portfolio-)
+## Stack
+- **Next.js 15** (App Router, TypeScript)
+- **Tailwind CSS** — utility-first styling
+- **Framer Motion** — scroll-driven animations, layout transitions
+- **React Three Fiber** — 3D TorusKnot hero scene with particles
+- **Three.js** — underlying 3D engine
 
-## Tech Stack
-- HTML5 / CSS3 / Vanilla JavaScript
-- Three.js (3D particle background)
-- Intersection Observer API (scroll animations)
-- CSS custom properties & glassmorphism
-- Google Fonts (Space Grotesk + Orbitron)
+## Unique Feature
+**Aurora Cursor Spotlight** — a CSS radial-gradient tied to real-time mouse position creates a living violet/cyan aurora effect across the entire page via a single CSS custom property (`--mouse-x / --mouse-y`).
 
-## Features
-- Interactive Three.js 3D background with particles and floating geometry
-- Custom cursor with magnetic follower
-- Typed text animation
-- 3D card tilt effect
-- Animated skill bars
-- Project filter tabs
-- Smooth scroll + active nav detection
-- Fully responsive design
-- Loading screen animation
+## Run locally
+```bash
+npm install
+npm run dev
+```
+
+## Deploy
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/URSA0112/Portfolio-)

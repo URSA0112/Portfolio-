@@ -1,0 +1,93 @@
+export const nav = ['About', 'Skills', 'Projects', 'Contact']
+
+export const projects = [
+  {
+    id: 'arcana-garden',
+    title: 'Arcana Garden',
+    description: 'An immersive web experience exploring mystical garden themes with rich visuals and interactive elements.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    category: 'web',
+    accent: '#7c3aed',
+    github: 'https://github.com/URSA0112/Arcana-garden',
+    live: null,
+    featured: true,
+  },
+  {
+    id: 'food-order',
+    title: 'Food Order',
+    description: 'A modern food ordering platform with intuitive UI, real-time order tracking, and seamless checkout.',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    category: 'web',
+    accent: '#f59e0b',
+    github: 'https://github.com/URSA0112/FoodOrder',
+    live: null,
+    featured: true,
+  },
+  {
+    id: 'ios-app',
+    title: 'iOS App',
+    description: 'A native iOS application built with Swift and SwiftUI, featuring a clean interface and smooth UX.',
+    tags: ['Swift', 'SwiftUI', 'Xcode'],
+    category: 'mobile',
+    accent: '#06b6d4',
+    github: 'https://github.com/URSA0112/iosApp',
+    live: null,
+    featured: true,
+  },
+  {
+    id: 'marush',
+    title: 'Marush',
+    description: 'A creative project showcasing elegant design patterns and interactive UI components with a distinct aesthetic.',
+    tags: ['JavaScript', 'CSS', 'Figma'],
+    category: 'design',
+    accent: '#ec4899',
+    github: 'https://github.com/URSA0112/marush',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 'resort',
+    title: 'Resort',
+    description: 'A luxury resort booking platform featuring stunning visuals, reservation system, and premium UX.',
+    tags: ['React', 'Firebase', 'Tailwind'],
+    category: 'web',
+    accent: '#10b981',
+    github: 'https://github.com/URSA0112/Resort',
+    live: null,
+    featured: true,
+  },
+  {
+    id: 'capsule',
+    title: 'Capsule',
+    description: 'A digital time capsule app that lets users store memories, messages, and media to open in the future.',
+    tags: ['Next.js', 'PostgreSQL', 'TypeScript'],
+    category: 'web',
+    accent: '#f97316',
+    github: 'https://github.com/URSA0112/capsule',
+    live: null,
+    featured: false,
+  },
+] as const
+
+export const skills = [
+  {
+    label: 'Frontend',
+    icon: 'layers',
+    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Three.js'],
+  },
+  {
+    label: 'Backend',
+    icon: 'server',
+    items: ['Node.js', 'Express', 'REST APIs', 'GraphQL', 'Firebase', 'Python'],
+  },
+  {
+    label: 'Mobile',
+    icon: 'smartphone',
+    items: ['Swift', 'SwiftUI', 'React Native', 'Xcode', 'iOS Dev'],
+  },
+  {
+    label: 'Tools & DB',
+    icon: 'tool',
+    items: ['PostgreSQL', 'MongoDB', 'Git', 'Docker', 'Figma', 'Vercel'],
+  },
+]
