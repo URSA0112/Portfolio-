@@ -1,4 +1,5 @@
 'use client'
+import { Component, ReactNode } from 'react'
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 
@@ -6,6 +7,21 @@ const HeroScene = dynamic(() => import('./HeroScene'), {
   ssr: false,
   loading: () => <div className="absolute inset-0 bg-[#06060f]" />,
 })
+
+class SceneBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false }
+  static getDerivedStateFromError() { return { failed: true } }
+  render() {
+    if (this.state.failed) {
+      return (
+        <div className="absolute inset-0 bg-[#06060f]">
+          <div className="absolute inset-0 bg-gradient-radial from-violet-900/20 via-transparent to-transparent" />
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
 
 const container = {
   hidden: {},
@@ -21,7 +37,9 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* R3F Scene */}
       <div className="absolute inset-0">
-        <HeroScene />
+        <SceneBoundary>
+          <HeroScene />
+        </SceneBoundary>
       </div>
 
       {/* Gradient fade at bottom */}
@@ -50,7 +68,7 @@ export default function Hero() {
             I craft performant, beautiful digital experiences — from pixel-perfect UIs to scalable back-end systems.
           </motion.p>
 
-          {/* Terminal tag — unique identity element */}
+          {/* Terminal tag */}
           <motion.div variants={item}>
             <div className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm px-4 py-2 glass rounded-lg text-white/30 border-white/[0.06]">
               <span className="text-violet-400">$</span>
